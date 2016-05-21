@@ -127,6 +127,11 @@
 						font-family: 'PTSans';
 						font-size: 14px;
 						text-decoration: underline;
+
+						&:hover {
+							text-decoration: none;
+							color: #222;
+						}
 					}
 
 					&.adress {
@@ -197,6 +202,10 @@
 						font-family: Calibri;
 						font-size: 18px;
 						text-decoration: none;
+
+						&:hover {
+							color: #999;
+						}
 					}
 
 					&:last-child {
@@ -275,7 +284,12 @@
 					text-decoration: none;
 					float: left;
 					margin: 10px 14px;
+				}
 
+				&:hover {
+					.catalog-link {
+						border-bottom: 1px solid transparent;
+					}
 				}
 			}
 
@@ -287,6 +301,10 @@
 					li {
 						margin: 0 2px;
 						float: left;
+
+						&:hover {
+							opacity: 0.7;
+						}
 					}
 				}
 			}
@@ -335,6 +353,7 @@
 			color: transparent;
 			left: -20px;
 			z-index: 10000;
+			opacity: 1;
 		}
 
 		.film_roll_next {
@@ -344,6 +363,7 @@
 			color: transparent;
 			right: -20px;
 			z-index: 10000;
+			opacity: 1;
 		}
 
 		.element {
@@ -409,6 +429,14 @@
 
 		.next, .prev {
 			top:244px;
+		}
+	}
+}
+
+.double-top {
+	.special-container {
+		.name {
+			left: 479px;
 		}
 	}
 }
@@ -511,6 +539,10 @@
 					font-family: Calibri;
 					font-size: 15px;
 					line-height: 20px;
+
+					&:hover {
+						text-decoration: none;
+					}
 				}
 			}
 		}	
@@ -574,6 +606,10 @@
 				font-size: 14px;
 				margin-right: 40px;
 				float: left;
+
+				&:hover {
+					text-decoration: none;
+				}
 			}
 
 			.email {
@@ -583,6 +619,10 @@
 
 				a {
 					color: #0468b9;
+
+					&:hover {
+						text-decoration: none;
+					}
 				}
 			}
 		}
@@ -636,6 +676,230 @@
 			height: 0;
 			clear: both;
 			visibility: hidden;
+		}
+	}
+}
+
+@media (min-width: 1000px) and (max-width: 1239px) {
+	.container {
+		width: 1000px;
+	}
+
+	.top {
+		.display {
+			.slides_container {
+				width: 1000px;
+
+				.caption {
+					width:1000px;
+				}
+			}
+
+			.next {
+				left: 880px;
+			}
+
+			.header {
+				left: 0;
+			}
+
+			.top-menu {
+				left: 0;
+			}
+
+			.browse {
+				width: 1000px;
+
+				.catalog {
+					margin-left: 20px;
+				}
+
+				.social-links {
+					margin-right: 20px;
+				}
+			}
+		}
+
+		.special-container {
+			width: 1000px;
+
+
+			.name {
+				top: -16px;
+				left: 370px;
+			}
+		}
+
+		.special, .special2 {
+			width: 960px;
+			height: 250px;
+		}
+	}
+
+	.double-top {
+		.special-container {
+			.name {
+				top: -16px;
+				left: 358px;
+			}
+		}
+	}
+
+	.info {
+		.ad {
+			width: 940px;
+		}
+	}
+
+	.footer-container {
+
+		.footer {
+			width: 980px;
+
+			.copyright {
+				margin-left: 0;
+			}
+
+			.phones {
+				width: 240px;
+			}
+		}
+	}
+}
+
+@media (max-width: 999px) {
+	.container {
+		width: 580px;
+	}
+
+	.top {
+		.display {
+			height: 216px;
+
+			.slides_container {
+				width: 580px;
+				display: none;
+
+				.caption {
+					width: 580px;
+				}
+			}
+
+			.next, .prev {
+				display: none;
+			}
+
+			.header {
+				top: 0;
+				left: 0;
+				width: 580px;
+
+				.callback {
+					display: none;
+				}
+
+				.links {
+					display: none;
+				}
+			}
+
+			.top-menu {
+				top: 100px;
+				left: 0;
+				width: 580px;
+
+				ul {
+					li {
+						padding: 8px 14px;
+					}
+				}
+			}
+
+			.browse {
+				display: none;
+
+				.catalog {
+					margin-left: 20px;
+				}
+
+				.social-links {
+					margin-right: 20px;
+				}
+			}
+		}
+
+		.special-container {
+			width: 580px;
+
+
+			.name {
+				top: -16px;
+				left: 160px;
+			}
+		}
+
+		.special, .special2 {
+			width: 540px;
+			height: 250px;
+		}
+	}
+
+	.double-top {
+		.display {
+			display: none;
+		}
+
+		.special-container {
+			padding-top: 1px;
+
+			.name {
+				top: 24px;
+				left: 149px;
+			}
+		}
+	}
+
+	.info {
+		.ad {
+			width: 520px;
+		}
+
+		.about-container {
+			width: 580px;
+
+			.about {
+				width: 580px;
+			}
+
+			.news {
+				width: 580px;
+				margin-top: 20px;
+				margin-left: 0;
+			}
+		}
+
+		.partner {
+			display: none;
+		}
+	}
+
+	.footer-container {
+
+		.footer {
+			width: 580px;
+
+			.copyright {
+				width: 310px;
+				margin-left: 0;
+			}
+
+			.phones {
+				width: 200px;
+			}
+
+			.dev {
+				display: none;
+			}
 		}
 	}
 }

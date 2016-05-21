@@ -1,6 +1,8 @@
 $(function(){
 	$('.display').slides({
-		preload: true
+		preload: true,
+		slideSpeed: 1000,
+		effect: 'slide'
 	});
 
 	fr = new FilmRoll({
