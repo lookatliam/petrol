@@ -3,6 +3,16 @@
 	src: url('../fonts/PTSans-Regular.ttf');
 }
 
+@font-face {
+	font-family: 'CuprumFFU';
+	src: url('../fonts/CuprumFFU-Regular.otf');
+}
+
+@font-face {
+	font-family: 'OfficinaSans';
+	src: url('../fonts/OfficinaSansMedium.ttf');
+}
+
 .container {
 	width: 1240px;
 	margin: 0 auto;
@@ -10,11 +20,59 @@
 
 .top {
 	background: url('../img/top_bg.png');
+	padding-bottom: 40px;
 
 	.display {
 		height: 747px;
-		background: url('../img/top-display_bg.jpg') top center;
-		padding: 15px 0 0;
+		position: relative;
+
+		.slides_container {
+			width: 1240px;
+			height: 747px;
+
+			.caption {
+				position:absolute;
+				bottom: 0;
+				height:170px;
+				width:1240px;
+				text-align: center;
+
+				.title {
+					color: #fff;
+					font-family: 'CuprumFFU';
+					font-size: 50px;
+					margin: 0 0 16px;
+				}
+
+				.addition {
+					color: #fff;
+					font-family: Calibri;
+					font-size: 22px;
+					background: url('../img/slide-addition_bg.png');
+					padding: 4px 10px; 
+					line-height: 38px;
+					display: inline;
+					white-space: pre;
+				}
+			}
+		}
+
+		.pagination {
+			display: none;
+		}
+		.next, .prev {
+			position:absolute;
+			top:364px;
+			left:50px;
+			width:69px;
+			height:69px;
+			display:block;
+			z-index:101;
+		}
+
+		.next {
+			left: 1120px;
+		}
 
 		.header {
 			width: 1000px;
@@ -22,6 +80,10 @@
 			background: url('../img/top-header_bg.png') top center repeat-x;
 			margin: 0 auto;
 			border-radius: 5px;
+			position: absolute;
+			top: 15px;
+			left: 120px;
+			z-index: 100;
 
 			.logo {
 				margin: 20px 0 0 20px;
@@ -117,6 +179,10 @@
 			background: #1d1d1d;
 			margin: 10px auto;
 			border-radius: 5px;
+			position: absolute;
+			top: 130px;
+			left: 120px;
+			z-index: 100;
 
 			ul {
 
@@ -174,6 +240,393 @@
 				height: 0;
 				clear: both;
 				visibility: hidden;
+			}
+		}
+
+		.browse {
+			width: 1240px;
+			position: absolute;
+			bottom: 0;
+			z-index: 100;
+
+			.catalog {
+				background: url('../img/catalog_bg.png');
+				margin-left: 100px;
+				margin-bottom: 60px;
+				float: left;
+				border-radius: 5px;
+
+				.catalog-button {
+					width: 32px;
+					height: 17px;
+					background: url('../img/catalog-button_bg.png') center center no-repeat;
+					padding: 12px 14px;
+					float: left;
+					display: block;
+					border-right: 1px solid #4eb8db;
+					
+				}
+
+				.catalog-link {
+					color: #fff;
+					font-family: 'CuprumFFU';
+					font-size: 20px;
+					border-bottom: 1px solid #fff;
+					text-decoration: none;
+					float: left;
+					margin: 10px 14px;
+
+				}
+			}
+
+			.social-links {
+				margin-right: 100px;
+				float: right;
+
+				ul {
+					li {
+						margin: 0 2px;
+						float: left;
+					}
+				}
+			}
+		}
+
+		&:after {
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+	}
+
+	.special-container {
+		width: 1240px;
+		margin: 0 auto;
+		position: relative;
+
+		.name {
+			color: #fff;
+			font-family: 'CuprumFFU';
+			font-size: 30px;
+			position: absolute;
+			top: -16px;
+			left: 490px;
+			border-bottom: 1px solid #fff;
+		}
+	}
+
+	.special, .special2 {
+		width: 1070px;
+		height: 250px;
+		border: 3px solid #fff;
+		border-top: none;
+		background: url('../img/carousel_bg.png') top center no-repeat;
+		border-radius: 5px;
+		margin: 0 auto;
+		margin-top: 40px;z-index: 10;
+		position: relative;
+
+		.film_roll_prev {
+			width: 28px;
+			height: 28px;
+			background: url('../img/carousel-prev_bg.png') left top no-repeat;
+			color: transparent;
+			left: -20px;
+			z-index: 10000;
+		}
+
+		.film_roll_next {
+			width: 28px;
+			height: 28px;
+			background: url('../img/carousel-next_bg.png') left top no-repeat;
+			color: transparent;
+			right: -20px;
+			z-index: 10000;
+		}
+
+		.element {
+			width: 200px;
+			height: 180px;
+			margin: 30px 14px 0;
+			float: left;
+			border: 3px solid #1a77a7;
+			border-radius: 5px;
+			position: relative;
+
+			img {
+				overflow: hidden;
+			}
+
+			.title {
+				color: #fff;
+				font-family: Calibri;
+				font-size: 16px;
+				background: #1a77a7;
+				padding: 8px 20px;
+				border-radius: 20px;
+				text-decoration: underline;
+				position: absolute;
+				bottom: -15px;
+				left: 60px;
+				z-index: 100;
+			}
+		}
+	}
+
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+.double-top {
+	background: url('../img/double-top_bg.png');
+
+	.display {
+		height: 600px;
+		position: relative;
+
+		.slides_container {
+			width: 1240px;
+			height: 600px;
+
+			.caption {
+				bottom: 170px !important;
+			}
+
+			div {
+				img {
+					position: relative;
+    				bottom: 170px;
+				}
+			}
+		}
+
+		.next, .prev {
+			top:244px;
+		}
+	}
+}
+
+.info {
+	background: #e5e5e5;
+	padding: 40px 0;
+
+	.ad {
+		width: 1000px;
+		background: url('../img/info-ad_bg.jpg');
+		margin: 0 auto;
+		padding: 20px 0 20px 60px;
+		border-radius: 5px;
+
+		.title {
+			color: #ccc;
+			font-family: 'OfficinaSans';
+			font-size: 36px;
+			text-shadow: 1px 1px 1px #000;
+			text-transform: uppercase;
+		}
+
+		.addition {
+			color: #ccc;
+			font-family: 'OfficinaSans';
+			font-size: 24px;
+			margin-bottom: 20px;
+			text-shadow: 1px 1px 1px #000;
+		}
+
+		.diller {
+			color: #000;
+			font-family: 'OfficinaSans';
+			font-size: 15px;
+			background: #ffa200;
+			padding: 2px 4px;
+			display: inline;
+			white-space: pre;
+			line-height: 24px;
+		}
+	}
+
+	.about-container {
+		width: 1000px;
+		margin: 0 auto;
+		padding: 40px 0;
+
+		.about {
+			width: 460px;
+			float: left;
+
+			.title {
+				color: #000;
+				font-family: Calibri;
+				font-size: 32px;
+				margin: 0 0 20px;
+			}
+
+			.addition {
+				color: #000;
+				font-family: Calibri;
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+
+		.news {
+			width: 500px;
+			margin-left: 40px;
+			float: left;
+
+			.title {
+				color: #000;
+				font-family: Calibri;
+				font-size: 32px;
+				margin: 0 0 20px;
+			}
+
+			.article {
+				width: 230px;
+				margin-right: 40px;
+				float: left;
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				.date {
+					width: 86px;
+					color: #000;
+					font-family: Calibri;
+					font-size: 14px;
+					background: url('../img/news-date_bg.png') right top no-repeat;
+					margin: 0 0 10px;
+				}
+
+				.name {
+					color: #fe1e00;
+					font-family: Calibri;
+					font-size: 15px;
+					line-height: 20px;
+				}
+			}
+		}	
+
+		&:after {
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+	}
+
+	.partner {
+		width: 1000px;
+		margin: 0 auto;
+
+		.title {
+			width: 600px;
+			height: 29px;
+			color: #fff;
+			font-family: 'OfficinaSans';
+			font-size: 16px;
+			background: url('../img/info-partner_bg.png');
+			margin: 0 auto;
+			padding: 15px 0 0;
+			border-radius: 20px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+	}
+}
+
+.footer-container {
+	background: #e5e5e5;
+
+	.footer {
+		width: 1070px;
+		margin: 0 auto;
+		padding: 20px 0;
+		border-top: 1px dashed #a3a3a3;
+
+		.copyright {
+			width: 380px;
+			background: url('../img/copyright.png') left top no-repeat;
+			margin-left: 60px;
+			padding-left: 30px;
+			float: left;
+
+			.adress {
+				color: #000;
+				font-family: Calibri;
+				font-size: 14px;
+				line-height: 20px;
+				margin-bottom: 20px;
+			}
+
+			.all-contacts {
+				color: #0468b9;
+				font-family: Calibri;
+				font-size: 14px;
+				margin-right: 40px;
+				float: left;
+			}
+
+			.email {
+				color: #000;
+				font-family: Calibri;
+				font-size: 14px;
+
+				a {
+					color: #0468b9;
+				}
+			}
+		}
+
+		.phones {
+			width: 260px;
+			background: url('../img/footer-phones_bg.png') left top no-repeat;
+			padding-left: 40px;
+			float: left;
+
+			.main {
+				color: #000;
+				font-family: Calibri;
+				font-size: 22px;
+				margin-bottom: 10px;
+			}
+
+			.addition {
+				color: #151515;
+				font-family: Calibri;
+				font-size: 14px;
+				line-height: 20px;
+
+				b {
+					font-weight: bold;
+					font-size: 12px;
+				}
+			}
+		}
+
+		.dev {
+			width: 290px;
+			float: right;
+
+			a {
+				margin-right: 10px;
+				float: left;
+			}
+
+			p {
+				color: #000;
+				font-family: Calibri;
+				font-size: 14px;
+				margin-top: 14px;
 			}
 		}
 
