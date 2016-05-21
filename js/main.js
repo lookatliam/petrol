@@ -1,8 +1,8 @@
-$(function(){
+
 	$('.display').slides({
-		preload: true,
-		fadeSpeed: 1000,
-		effect: 'fade'
+		
+		slideSpeed: 1000,
+		effect: 'slide'
 	});
 
 	fr = new FilmRoll({
@@ -26,5 +26,4 @@ $(function(){
 
 	$(".film_roll_prev").eq(1).appendTo(".special2");
 	$(".film_roll_next").eq(1).appendTo(".special2");
-});
 
