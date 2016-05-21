@@ -25,6 +25,7 @@
 	.display {
 		height: 747px;
 		position: relative;
+		box-shadow: 2px 2px 30px #000;
 
 		.slides_container {
 			width: 1240px;
@@ -111,6 +112,12 @@
 					font-family: Calibri;
 					font-size: 12px;
 					margin: 4px 0 0 80px;
+				}
+
+				&:hover {
+					.title {
+						text-decoration: none;
+					}
 				}
 			}
 
@@ -332,6 +339,11 @@
 			top: -16px;
 			left: 490px;
 			border-bottom: 1px solid #fff;
+			text-decoration: none;
+
+			&:hover {
+				border-bottom: 1px solid transparent;
+			}
 		}
 	}
 
@@ -432,7 +444,7 @@
 			div {
 				img {
 					position: relative;
-    				bottom: 170px;
+    				bottom: 162px;
 				}
 			}
 		}
@@ -454,6 +466,10 @@
 .info {
 	background: #e5e5e5;
 	padding: 40px 0;
+
+	.ad-link {
+		text-decoration: none;
+	}
 
 	.ad {
 		width: 1000px;
